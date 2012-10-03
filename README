@@ -1,0 +1,20 @@
+Whoosh is an ARM Linux bootloader forked from arm-kernel-shim aimed to be really
+small and fast.
+
+The ultimate goal of the projet is to be a repository of various bootloader
+designed to be fast. It is not aiming at being generic or flexible.
+
+For now, whoosh supports Freescale i.mx6 platforms.
+
+To build:
+=========
+
+$ make <board>_config
+$ make
+
+A script is provided to help building the final bootloader + kernel image and
+flash it on an SDcard. Run it from the root directory of whoosh :
+
+$ make <board>_config
+$ ./script/FSL.sh -k <path to kernel Image or zImage> -m <path to mkimage> [<mmcdevice>]
+
