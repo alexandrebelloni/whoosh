@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+#
+# Filter that swaps STDIN and writes it to STDOUT
+
+while (sysread(STDIN,$d,4)) {
+    print pack("N",unpack("V",$d))
+}
+
+0;
+
+
