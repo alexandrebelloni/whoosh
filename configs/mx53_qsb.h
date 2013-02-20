@@ -6,20 +6,21 @@
 	   by another piece of code, e.g. a boot loader. */
 #define CREATE_ATAGS		/* Construct ATAGS from fields herein */
 
-#define PHYS_PARAMS		0x10000100 /* Address for the parameter list */
-
-#define RAM_BANK0_START		0x10000000
-#define RAM_BANK0_LENGTH	(1u * 1024 * 1024 * 1024)
-
 	/* GUARANTEE_ATAG_CMDLINE makes sure that a command line is
 	   present in the ATAGS list.  If none is found, the
 	   COMMANDLINE below is added appended to the end of the
 	   ATAGS. */
 #define GUARANTEE_ATAG_CMDLINE
-#define COMMANDLINE "lpj=7905280 video=mxcfb0:dev=ldb,LDB-XGA,if=RGB565 ldb=dul0 mem=64M"
 
-#define MACH_TYPE		   3980
+#define PHYS_PARAMS			0x70000100 /* Address for the parameter list */
 
-#include "mx6.h"
+#define RAM_BANK0_START		0x70000000
+#define RAM_BANK0_LENGTH	(512 * 1024 * 1024)
+
+#define COMMANDLINE			"console=ttymxc0,115200 lpj=4997120"
+
+#define MACH_TYPE			3273
+
+#include "mx53.h"
 
 #endif  /* __CONFIG_H__ */

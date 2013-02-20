@@ -23,4 +23,6 @@
 
 #define MACH_TYPE		   3769
 
+#include "mx6.h"
+
 #endif  /* __CONFIG_H__ */
