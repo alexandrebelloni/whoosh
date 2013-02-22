@@ -4,7 +4,7 @@ small and fast.
 The ultimate goal of the projet is to be a repository of various bootloader
 designed to be fast. It is not aiming at being generic or flexible.
 
-For now, whoosh supports Freescale i.mx6 platforms.
+For now, whoosh supports Freescale i.mx53 and i.mx6x platforms.
 
 To build:
 =========
